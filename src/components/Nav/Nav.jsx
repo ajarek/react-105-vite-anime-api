@@ -10,7 +10,7 @@ const Nav = () => {
     setSearchValue(e.target.value);
 
   };
-console.log(searchValue);
+
   return (
     <div className='nav'>
       <h2>Anime</h2>

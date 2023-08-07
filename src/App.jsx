@@ -4,13 +4,15 @@ import Loading from './components/Loading/Loading'
 import FullPageLayout from './components/FullPageLayout/FullPageLayout'
 import ErrorMessage from './components/ErrorMessage/ErrorMessage'
 import { useFetch } from './helper/useFetch'
+import { useDebounce } from './helper/useDebounce'
 import { createContext, useState } from 'react'
 export const AppContext = createContext()
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
+  const debouncedSearchValue = useDebounce(searchValue, 700) || ''
   const { data, pending, error } = useFetch(
-    `https://api.jikan.moe/v4/anime?q=${searchValue}&limit=20`
+    `https://api.jikan.moe/v4/anime?q=${debouncedSearchValue}&limit=20`
   )
   const newData = { ...data }
   const animeData = { ...newData.data }
@@ -32,7 +34,7 @@ function App() {
             <Nav />
 
             <div className='card-wrapper'>
-              {Object.values(animeData).map((obj) => {
+              {data&&Object.values(animeData).map((obj) => {
                 return (
                   <Card
                     key={obj.mal_id}
