@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { React, useState, useContext, useEffect } from 'react'
+import { AppContext } from '../../App'
 import Search from '../Search/Search'
 import './Nav.css'
 
 const Nav = () => {
-  const [searchValue, setSearchValue] = useState('');
-
+  
+  const { searchValue, setSearchValue } = useContext(AppContext)
   const handleSearchInputChange = (e) => {
     setSearchValue(e.target.value);
 
