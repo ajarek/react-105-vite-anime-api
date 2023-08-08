@@ -1,4 +1,4 @@
-import { React, useState, useContext, useEffect } from 'react'
+import { React, useContext } from 'react'
 import { AppContext } from '../../App'
 import Search from '../Search/Search'
 import './Nav.css'
@@ -6,10 +6,7 @@ import './Nav.css'
 const Nav = () => {
   
   const { searchValue, setSearchValue } = useContext(AppContext)
-  const handleSearchInputChange = (e) => {
-    setSearchValue(e.target.value);
-
-  };
+  
 
   return (
     <div className='nav'>

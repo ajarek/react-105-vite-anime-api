@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
 }
+
 .search .search-input {
   width: 375px;
   height: 40px;
@@ -12,6 +13,7 @@
   border: 1px solid var(--red-dark);
   outline: 1px solid var(--red-dark);
 }
+
 @media (max-width: 630px) {
   .search .search-input {
     width: 100%;

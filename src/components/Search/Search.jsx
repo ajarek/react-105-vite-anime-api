@@ -14,19 +14,5 @@ const Search = ({ searchValue, setSearchValue, placeholder }) => {
     </div>
   )
 }
-/*const [searchValue, setSearchValue] = useState('');
-
-  const handleSearchInputChange = (e) => {
-    setSearchValue(e.target.value);
-  };
-
-  return (
-    <div>
-      <SearchInput value={searchValue} onChange={handleSearchInputChange} />
-    </div>
-  );*/
-  /*const filteredData = data.filter((item) =>
-  item.name.toLowerCase().includes(searchValue.toLowerCase())
-  );*/
   
 export default Search

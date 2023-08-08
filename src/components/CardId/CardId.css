@@ -1,33 +1,39 @@
-.card-id{
+.card-id {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   height: 100vh;
   padding: 32px;
 }
-.card-id .img{
+
+.card-id .img {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-.card-id .img img{
+
+.card-id .img img {
   width: 100%;
   object-fit: cover;
 }
-.card-id .info{
+
+.card-id .info {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding:0 16px;
+  padding: 0 16px;
 }
-.card-id .synopsis-wrapper{
+
+.card-id .synopsis-wrapper {
   max-height: 300px;
   overflow-y: auto;
 }
-.card-id .info p{
-font-size: 1.2rem;
+
+.card-id .info p {
+  font-size: 1.2rem;
 }
-.card-id .info button{
+
+.card-id .info button {
   font-size: 1.5rem;
   background-color: var(--red);
   color: var(--white);
@@ -36,17 +42,20 @@ font-size: 1.2rem;
   padding: 8px;
   cursor: pointer;
 }
-.card-id .info button:hover{
+
+.card-id .info button:hover {
   background-color: var(--red-dark);
 }
+
 @media (max-width:740px) {
-  .card-id{
+  .card-id {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
-   height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
     padding: 5px;
   }
-  .card-id .synopsis-wrapper{
+
+  .card-id .synopsis-wrapper {
     max-height: 100%;
     overflow-y: none;
   }

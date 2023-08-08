@@ -2,7 +2,10 @@ import './Card.css'
 
 const Card = ({ src, title, onClick }) => {
   return (
-    <div className='card' onClick={onClick} >
+    <div
+      className='card'
+      onClick={onClick}
+    >
       <div className='img'>
         <img
           src={src}
@@ -11,7 +14,6 @@ const Card = ({ src, title, onClick }) => {
       </div>
       <div className='title'>
         <h3>{title}</h3>
-       
       </div>
     </div>
   )
