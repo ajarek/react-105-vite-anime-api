@@ -9,6 +9,7 @@
   border-radius: 25px;
   padding: 0 2rem;
   font-size: 1.3rem;
+  border: 2px solid var(--red-dark);
 }
 @media (max-width: 630px) {
   .search .search-input {

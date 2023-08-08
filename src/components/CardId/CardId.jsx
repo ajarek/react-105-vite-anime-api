@@ -7,10 +7,19 @@ const CardId = () => {
   const singleCard=Object.values(animeData).find(el=>el.mal_id===selectedId)
  console.log(singleCard);
   return (
-    <div>
-      <h1>CardId: {selectedId}</h1>
+    <div className='card-id'>
+      <div className="img">
       <img src={singleCard.images.jpg.image_url} alt="" />
-      <button onClick={()=>setActiveCardId(false)}>❌</button>
+      </div>
+      <div className="info">
+      <h2>{singleCard.title}</h2>
+      <p>favorites: {singleCard.favorites}</p>
+      <p>popularity: {singleCard.popularity}</p>
+      <p>rank: {singleCard.rank}</p>
+      <p>producers: {singleCard.producers[0]?.name}</p>
+      <p>synopsis:<br/> {singleCard.synopsis}</p>
+      <button onClick={()=>setActiveCardId(false)}>Back</button>
+      </div>
       </div>
   )
 }
