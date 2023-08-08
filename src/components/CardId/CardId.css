@@ -14,10 +14,15 @@
   object-fit: cover;
 }
 .card-id .info{
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   padding:0 16px;
+}
+.card-id .synopsis-wrapper{
+  max-height: 300px;
+  overflow-y: auto;
 }
 .card-id .info p{
 font-size: 1.2rem;
@@ -33,4 +38,16 @@ font-size: 1.2rem;
 }
 .card-id .info button:hover{
   background-color: var(--red-dark);
+}
+@media (max-width:740px) {
+  .card-id{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+   height: 100%;
+    padding: 5px;
+  }
+  .card-id .synopsis-wrapper{
+    max-height: 100%;
+    overflow-y: none;
+  }
 }

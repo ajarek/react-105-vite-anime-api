@@ -9,10 +9,13 @@
   border-radius: 25px;
   padding: 0 2rem;
   font-size: 1.3rem;
-  border: 2px solid var(--red-dark);
+  border: 1px solid var(--red-dark);
+  outline: 1px solid var(--red-dark);
 }
 @media (max-width: 630px) {
   .search .search-input {
     width: 100%;
+    font-size: 1.2rem;
+    padding: 0 8px;
   }
 }

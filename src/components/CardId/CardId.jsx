@@ -17,7 +17,10 @@ const CardId = () => {
       <p>popularity: {singleCard.popularity}</p>
       <p>rank: {singleCard.rank}</p>
       <p>producers: {singleCard.producers[0]?.name}</p>
-      <p>synopsis:<br/> {singleCard.synopsis}</p>
+      
+      <p>synopsis:<br/>
+      <div className="synopsis-wrapper"> {singleCard.synopsis}</div></p>
+      
       <button onClick={()=>setActiveCardId(false)}>Back</button>
       </div>
       </div>
